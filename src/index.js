@@ -1,7 +1,8 @@
 import React from "react";
 import { createRoot } from "react-dom/client";
-
-const App = () => <h1>Hello from React + Parcel!</h1>;
+import { RouterProvider } from 'react-router-dom';
+import appRouter from './router';
+import './styles.css';
 
 const root = createRoot(document.getElementById("root"));
-root.render(<App />);
+root.render(<RouterProvider router={appRouter} />);
