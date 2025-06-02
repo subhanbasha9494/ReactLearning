@@ -2,6 +2,8 @@ import React, { Suspense, useEffect, useState } from 'react';
 import { Outlet } from 'react-router-dom';
 import Header from './Pages/components/Header';
 import UserContext from './utils/UserContext';
+import { Provider } from 'react-redux';
+import appStore from './utils/appStore';
 
 function App() {
   //authentication
@@ -11,12 +13,14 @@ function App() {
     setUserName(data.name);
   }, []);
   return (
-    <UserContext.Provider value={{ loggedInUser: userName, setUserName }}>
-      <>
-        <Header />
-        <Outlet />
-      </>
-    </UserContext.Provider>
+    <Provider store={appStore}>
+      <UserContext.Provider value={{ loggedInUser: userName, setUserName }}>
+        <>
+          <Header />
+          <Outlet />
+        </>
+      </UserContext.Provider>
+    </Provider>
   );
 }
 

@@ -2,10 +2,12 @@ import { useState,useContext } from "react";
 import { Link } from "react-router-dom";
 import useOnlineStatus from "../../utils/useOnlineStatus";
 import UserContext from "../../utils/UserContext";
+import { useSelector } from "react-redux";
 const Header = () => {
     const [btnName, setBtnName] = useState("Logout");
     const onlineStatus = useOnlineStatus();
     const {loggedInUser} = useContext(UserContext);
+    const cartItems = useSelector((store) => store.cart.items);
     return (
         <div className="bg-white shadow-md py-4 px-6 flex justify-between items-center sticky top-0 z-10">
             <div className="logo-container">
@@ -19,7 +21,7 @@ const Header = () => {
                     <li><Link to="/" className="text-gray-800 hover:text-orange-500 transition-colors font-medium">Home</Link></li>
                     <li><Link to="/about" className="text-gray-800 hover:text-orange-500 transition-colors font-medium">About Us</Link></li>
                     <li><Link to="/contact" className="text-gray-800 hover:text-orange-500 transition-colors font-medium">Contact Us</Link></li>
-                    <li><Link to="/cart" className="text-gray-800 hover:text-orange-500 transition-colors font-medium">Cart</Link></li>
+                    <li className="font-bold"><Link to="/cart" className="text-gray-800 hover:text-orange-500 transition-colors font-medium">Cart - {cartItems.length}</Link></li>
                     <li><Link to="/grocery" className="text-gray-800 hover:text-orange-500 transition-colors font-medium">Grocery</Link></li>
                     <button 
                         type="button" 
