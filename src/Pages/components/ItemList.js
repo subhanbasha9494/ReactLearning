@@ -5,9 +5,9 @@ const ItemList = ({ data }) => {
 
   const dispatch = useDispatch();
 
-  const handleAddItem = () => {
+  const handleAddItem = (item) => {
     //dispatch An action
-    dispatch(addItem("IceCream"))
+    dispatch(addItem(item))
   }
   return (
     <div>

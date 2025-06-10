@@ -6,6 +6,7 @@ import Contact from './Pages/components/Contact';
 import Error from './Pages/components/Error';
 import Layout from './Pages/components/Layout';
 import RestaurantMenu from './Pages/components/RestarauntMenu';
+import Cart from './Pages/components/Cart';
 
 const Grocery = lazy(() => import('./Pages/components/Grocery'));
 
@@ -37,6 +38,10 @@ const appRouter = createBrowserRouter([
       {
         path: '/restaurant/:resId',
         element: <RestaurantMenu />,
+      },
+      {
+        path: '/cart',
+        element: <Cart />,
       },
     ],
     errorElement: <Error />,
