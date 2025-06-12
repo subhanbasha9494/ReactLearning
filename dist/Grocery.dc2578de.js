@@ -674,26 +674,18 @@ var prevRefreshSig = globalThis.$RefreshSig$;
 $parcel$ReactRefreshHelpers$0e43.prelude(module);
 
 try {
-var _jsxDevRuntime = require("react/jsx-dev-runtime");
 "use strict";
 Object.defineProperty(exports, "__esModule", {
     value: true
 });
 exports.default = void 0;
+var _jsxRuntime = require("e992b20213281e2a");
 const Grocery = ()=>{
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+    return /*#__PURE__*/ (0, _jsxRuntime.jsx)("div", {
+        children: /*#__PURE__*/ (0, _jsxRuntime.jsx)("p", {
             children: "Grocery List"
-        }, void 0, false, {
-            fileName: "src/Pages/components/Grocery.js",
-            lineNumber: 9,
-            columnNumber: 7
-        }, undefined)
-    }, void 0, false, {
-        fileName: "src/Pages/components/Grocery.js",
-        lineNumber: 8,
-        columnNumber: 10
-    }, undefined);
+        })
+    });
 };
 _c = Grocery;
 var _default = exports.default = Grocery;
@@ -705,6 +697,6 @@ $RefreshReg$(_c, "Grocery");
   globalThis.$RefreshReg$ = prevRefreshReg;
   globalThis.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"dVPUn","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi"}]},["9021Q"], null, "parcelRequire2b8c", {})
+},{"e992b20213281e2a":"05iiF","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi"}]},["9021Q"], null, "parcelRequire2b8c", {})
 
 //# sourceMappingURL=Grocery.dc2578de.js.map
